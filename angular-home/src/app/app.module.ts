@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ChartsComponent,
-    NotificationComponent
+    NotificationComponent,
+    SignUpLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     
   ],
   providers: [],
