@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TimelineService } from 'src/app/timeline.service';
+import { TimelineService } from 'src/app/services/timeline.service';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
@@ -42,11 +42,7 @@ export class ChartsComponent implements OnInit {
           
       }
     )
-    
-
-    
   }
-
 
   renderChart() {
     const dates = Object.keys(this.chartData.cases);
@@ -88,9 +84,6 @@ export class ChartsComponent implements OnInit {
     });
   }
   
-
-
-
   renderChart2() {
     const dates = Object.keys(this.chartdata2.cases);
     const cases = Object.values(this.chartdata2.cases);
@@ -129,9 +122,6 @@ export class ChartsComponent implements OnInit {
       }
     });
   }
-  
-  
-  
 
   }
 

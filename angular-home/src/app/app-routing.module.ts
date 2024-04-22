@@ -4,12 +4,14 @@ import { HomeComponent } from './components/home/home.component';
 import { ChartsComponent } from './components/charts/charts.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
+import { GoldRateComponent } from './components/gold-rate/gold-rate.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'charts',component:ChartsComponent},
   {path:'notification',component:NotificationComponent},
   {path:'signUp-login',component:SignUpLoginComponent},
+  {path:'gold-rate',component:GoldRateComponent},
 ];
 
 @NgModule({

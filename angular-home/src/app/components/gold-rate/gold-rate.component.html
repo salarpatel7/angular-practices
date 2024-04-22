@@ -1,0 +1,20 @@
+<!-- 
+<div *ngIf="goldrate">
+    <h2>Gold Price in INR</h2>
+    <p>{{ goldrate.price}}</p>
+  </div> -->
+<!-- gold-rate.component.html -->
+<div *ngIf="goldrate" class="card">
+    <div class="card-body">
+        <h2 class="card-title gold-heading">Gold Price in INR</h2>
+        <p class="card-text gold-price">Price: {{ goldrate.price | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">Previous Close: {{ goldrate.prev_close_price | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">Open Price: {{ goldrate.open_price | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">Low Price: {{ goldrate.low_price | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">High Price: {{ goldrate.high_price | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">Change: {{ goldrate.ch | currency:'INR':'symbol':'1.0-2' }}</p>
+        <p class="card-text gold-price">Change Percentage: {{ goldrate.chp }}%</p>
+        <p class="card-text gold-price">Gold price in gm (24k): {{ goldrate.price_gram_24k }}</p>
+
+    </div>
+</div>
