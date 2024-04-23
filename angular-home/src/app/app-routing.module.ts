@@ -5,6 +5,7 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
 import { GoldRateComponent } from './components/gold-rate/gold-rate.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'notification',component:NotificationComponent},
   {path:'signUp-login',component:SignUpLoginComponent},
   {path:'gold-rate',component:GoldRateComponent},
+  {path:'form',component:FormComponent},
 ];
 
 @NgModule({

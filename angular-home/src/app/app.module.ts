@@ -10,6 +10,7 @@ import { NotificationComponent } from './components/notification/notification.co
 import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
 import { FormsModule } from '@angular/forms';
 import { GoldRateComponent } from './components/gold-rate/gold-rate.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GoldRateComponent } from './components/gold-rate/gold-rate.component';
     ChartsComponent,
     NotificationComponent,
     SignUpLoginComponent,
-    GoldRateComponent
+    GoldRateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
