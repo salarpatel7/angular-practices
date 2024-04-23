@@ -13,6 +13,17 @@
           </div>
           <button type="submit" class="btn btn-primary mt-4" (click)="addContactDetails()">Submit</button>
         </form>
+        <!-- <form (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" [(ngModel)]="formData.firstName" name="firstName" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Write Your Email Here" [(ngModel)]="formData.email">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form> -->
       </div>
 
 
@@ -24,12 +35,14 @@
             <tr>
               <th>Name</th>
               <th>Email</th>
+              <th>:</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let item of details">
               <td>{{ item.name }}</td>
               <td>{{ item.email }}</td>
+              <td><button type="button" class="btn btn-danger" (click)="delete(item.id)" >Danger</button></td>
             </tr>
           </tbody>
         </table>

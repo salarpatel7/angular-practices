@@ -18,4 +18,12 @@ export class FormService {
   addContact(contactData:any):Observable<any>{
     return this.http.post(this.apiUrl,contactData)
   }
+
+  deleteContact(contactId:any):Observable<any>{
+    return this.http.delete(`${this.apiUrl}/${contactId}`)
+  }
+
+  updateContact(contactID:any,newData:any){
+    return this.http.put(this.apiUrl,newData)
+  }
 }

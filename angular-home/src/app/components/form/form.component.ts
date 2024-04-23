@@ -7,7 +7,7 @@ import { FormService } from 'src/app/services/form.service';
 })
 export class FormComponent {
   newContact: any = {};
-
+  formData: any = {};
   constructor(private formapi:FormService){}
 
   ngOnInit(){
@@ -40,6 +40,47 @@ export class FormComponent {
         }
       )
     }
+  }
+  // submitForm(): void {
+  //   console.log('Form data:', this.formData);
+    
+  //   this.formapi.addContact(this.formData).subscribe(
+  //     (res:any)=>{
+  //       console.log(res);
+  //       this.details.push(res)
+  //       this.formData={}
+        
+  //     }
+  //   )
+  // }
+
+
+  delete(constactId:any):void{
+    this.formapi.deleteContact(constactId).subscribe(
+      (res:any)=>{
+        console.log(`Deleted succesfully ${res}`);
+
+        this.details=this.details.filter((constact: { id: any; }) => constact.id !==constactId)
+      },
+      (err)=>{
+        console.log('failed to delete');
+        
+      }
+    )
+  }
+
+
+  editContact(contactId:any,newData:any){
+    this.formapi.updateContact(contactId,newData).subscribe(
+      (res)=>{
+        console.log(`editing ${res}`);
+        
+      },
+      (err:any)=>{
+        console.log('error to edit ');
+        
+      }
+    )
   }
   }
 
