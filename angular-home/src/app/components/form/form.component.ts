@@ -6,6 +6,7 @@ import { FormService } from 'src/app/services/form.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  newContact: any = {};
 
   constructor(private formapi:FormService){}
 
@@ -25,4 +26,22 @@ export class FormComponent {
     }
   )
   }
-}
+
+  addContactDetails(){
+    if (this.newContact.name && this.newContact.email){
+      this.formapi.addContact(this.newContact).subscribe(
+        (res:any)=>{
+          console.log(res,'contact added successfully');
+          this.newContact={}
+        },
+        (error:any)=>{
+          console.log('error adding contact',error);
+          
+        }
+      )
+    }
+  }
+  }
+
+
+
